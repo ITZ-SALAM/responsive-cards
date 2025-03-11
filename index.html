@@ -31,6 +31,29 @@
         .container {
             max-width: 1000px;
         }
+        /* Horizontal scrollbar hatane ke liye */
+
+        body, html {
+    overflow-x: hidden;
+}
+
+/* Ensure elements stay within screen */
+.container, .page-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Small screens ke liye adjustments */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
         .section-title {
             text-align: center;
@@ -336,7 +359,7 @@
             transform: translateY(-3px);
         }
 
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .card-img-top {
                 height: 180px;
             }
@@ -348,6 +371,53 @@
                 padding: 20px;
             }
         }
+         */
+
+         @media (max-width: 1024px) {
+    .card {
+        height: 450px;
+    }
+    .card-img-top {
+        height: 180px;
+    }
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 400px;
+        max-width: 90%;
+    }
+    .card-img-top {
+        height: 160px;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-img-top {
+        height: 140px;
+    }
+    .page-wrapper {
+        padding: 15px;
+    }
+    .section-title {
+        font-size: 1.2rem;
+    }
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}
+
     </style>
 </head>
 <body>
